@@ -2,14 +2,293 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive SIP Calculator</title>
-    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+
+    <!-- Primary Meta Tags -->
+    <title>Nandalal - Mutual Fund Distributor India | SIP Calculator, Goal Planner & Investment Advisory</title>
+    <meta name="description" content="Nandalal is an AMFI registered mutual fund distributor in India. Free SIP calculator, EMI calculator, goal planner, risk profiler, portfolio analyzer & expert investment guidance. Start investing from Rs 500/month." />
+    <meta name="keywords" content="mutual fund distributor India, SIP calculator, mutual fund advisor, AMFI registered, goal planner, EMI calculator, lumpsum calculator, risk profiler, portfolio analyzer, net worth calculator, financial planner India, best mutual funds India, SIP investment, mutual fund SIP, retirement planning India, child education planning, tax saving ELSS, Nandalal mutual fund" />
+    <meta name="author" content="Nandalal - AMFI Registered Mutual Fund Distributor" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://nandalal.in/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nandalal.in/" />
+    <meta property="og:title" content="Nandalal - Mutual Fund Distributor India | Free Financial Tools" />
+    <meta property="og:description" content="AMFI registered mutual fund distributor. Free SIP calculator, goal planner, risk profiler, portfolio analyzer & personalized investment advisory. Start SIP from Rs 500/month." />
+    <meta property="og:image" content="https://nandalal.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Nandalal" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+    <meta name="twitter:url" content="https://nandalal.in/" />
+    <meta name="twitter:title" content="Nandalal - Mutual Fund Distributor India | Free Financial Tools" />
+    <meta name="twitter:description" content="Free SIP calculator, goal planner, risk profiler & expert mutual fund advisory. AMFI registered. Start from Rs 500/month." />
+    <meta name="twitter:image" content="https://nandalal.in/og-image.png" />
+
+    <!-- Geo Tags (India) -->
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Mumbai" />
+    <meta name="geo.position" content="19.076090;72.877426" />
+    <meta name="ICBM" content="19.076090, 72.877426" />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#1e3a5f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nandalal" />
+    <meta name="application-name" content="Nandalal" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect to external services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Nandalal",
+      "description": "AMFI registered mutual fund distributor providing personalized investment advisory, SIP planning, portfolio analysis, and goal-based financial planning services in India.",
+      "url": "https://nandalal.in",
+      "logo": "https://nandalal.in/logo.png",
+      "image": "https://nandalal.in/og-image.png",
+      "telephone": "+91-98765-43210",
+      "email": "nandalal@example.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.076090,
+        "longitude": 72.877426
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": ["Mutual Fund Distribution", "Investment Advisory", "Financial Planning", "SIP Planning", "Portfolio Analysis"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Financial Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mutual Fund Advisory",
+              "description": "Personalized mutual fund recommendations based on goals, risk profile, and time horizon"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SIP Planning",
+              "description": "Systematic Investment Plan setup and monitoring with step-up options"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Goal-Based Financial Planning",
+              "description": "Customized investment plans for retirement, education, home purchase and other life goals"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Portfolio Review",
+              "description": "Analysis of existing mutual fund portfolio with benchmark comparison and rebalancing recommendations"
+            }
+          }
+        ]
+      },
+      "sameAs": [],
+      "priceRange": "Free consultation"
+    }
+    </script>
+
+    <!-- JSON-LD: WebApplication (for tools/calculators) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Nandalal Financial Planning Tools",
+      "url": "https://nandalal.in",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "SIP Calculator with Step-Up",
+        "Lumpsum Investment Calculator",
+        "EMI Calculator with Prepayment",
+        "Mutual Fund Explorer",
+        "Fund Comparison Tool",
+        "Portfolio Analyzer with CAS Upload",
+        "Net Worth Calculator",
+        "Risk Profiler & Financial Health Assessment",
+        "Financial Health Check",
+        "Goal Planner with Glide Path",
+        "FD Calculator",
+        "RD Calculator",
+        "PPF Calculator",
+        "Sukanya Samriddhi Calculator",
+        "NSC Calculator",
+        "Gratuity Calculator",
+        "HRA Exemption Calculator",
+        "CAGR Calculator",
+        "Inflation Calculator"
+      ],
+      "description": "Free online financial planning tools for Indian investors. Calculate SIP returns, plan goals, assess risk profile, analyze portfolio, and explore mutual funds."
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a mutual fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mutual fund pools money from many investors and invests it in stocks, bonds, or other securities. It is managed by a professional fund manager. You own units of the fund proportional to your investment. Mutual funds are regulated by SEBI in India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SIP (Systematic Investment Plan)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SIP is a way to invest a fixed amount regularly (usually monthly) in a mutual fund. It helps you build wealth through discipline, benefit from rupee cost averaging, and harness the power of compounding over time. You can start SIP with as little as Rs 500 per month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum amount to start investing in mutual funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most mutual funds allow SIP investments starting from Rs 500 per month. Lumpsum investments typically start from Rs 1,000 to Rs 5,000 depending on the fund house. There is no maximum limit for investment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are mutual fund returns taxed in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For equity funds: Short-term gains (held less than 1 year) are taxed at 15%. Long-term gains exceeding Rs 1 lakh per year are taxed at 10%. For debt funds: All gains are taxed at your income tax slab rate regardless of holding period. Dividend income is added to your total income and taxed at your slab rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ELSS and how does it save tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ELSS (Equity Linked Savings Scheme) is a type of equity mutual fund that qualifies for tax deduction under Section 80C of the Income Tax Act. You can claim deduction up to Rs 1.5 lakh per year. ELSS has the shortest lock-in period of 3 years among all 80C instruments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What returns can I expect from mutual funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historical average returns: Equity funds 12-15% per annum over long term (10+ years), Hybrid funds 8-12%, Debt funds 6-8%, Liquid funds 5-7%. These are averages and actual returns vary year to year. Past performance does not guarantee future results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can NRIs invest in mutual funds in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, NRIs can invest in Indian mutual funds through their NRE or NRO bank accounts. Some fund houses have restrictions for US/Canada-based NRIs due to FATCA compliance. KYC with overseas address proof is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start investing through Nandalal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fill the consultation form on our home page or contact us via WhatsApp. Nandalal will understand your goals, assess your risk profile, and recommend suitable mutual funds. You can also use our free tools like SIP Calculator, Risk Profiler, Goal Planner, and Fund Explorer."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nandalal.in/" },
+        { "@type": "ListItem", "position": 2, "name": "SIP Calculator", "item": "https://nandalal.in/#sip" },
+        { "@type": "ListItem", "position": 3, "name": "Mutual Funds", "item": "https://nandalal.in/#mutualfunds" },
+        { "@type": "ListItem", "position": 4, "name": "Goal Planner", "item": "https://nandalal.in/#goalplanner" },
+        { "@type": "ListItem", "position": 5, "name": "Portfolio Analyzer", "item": "https://nandalal.in/#portfolio" },
+        { "@type": "ListItem", "position": 6, "name": "Calculators", "item": "https://nandalal.in/#calculators" },
+        { "@type": "ListItem", "position": 7, "name": "FAQs", "item": "https://nandalal.in/#faq" },
+        { "@type": "ListItem", "position": 8, "name": "About Us", "item": "https://nandalal.in/#about" }
+      ]
+    }
+    </script>
   </head>
   <body>
+    <!-- Noscript fallback for SEO crawlers -->
+    <noscript>
+      <h1>Nandalal - AMFI Registered Mutual Fund Distributor India</h1>
+      <p>Plan your wealth with Nandalal. We offer free financial tools and expert mutual fund advisory services.</p>
+      <h2>Free Financial Tools</h2>
+      <ul>
+        <li>SIP Calculator - Calculate returns on systematic investment plans with step-up option</li>
+        <li>Lumpsum Calculator - Calculate one-time investment returns</li>
+        <li>EMI Calculator - Calculate loan EMI with prepayment analysis</li>
+        <li>Mutual Fund Explorer - Browse and research mutual fund schemes</li>
+        <li>Fund Comparison - Compare mutual funds side by side</li>
+        <li>Portfolio Analyzer - Upload CAS statement and analyze portfolio vs benchmarks</li>
+        <li>Net Worth Calculator - Track assets and liabilities with NRI support</li>
+        <li>Risk Profiler - Assess risk appetite and financial health</li>
+        <li>Goal Planner - Plan for retirement, education, home purchase with glide path</li>
+        <li>FD Calculator, RD Calculator, PPF Calculator, SSY Calculator, NSC Calculator</li>
+        <li>Gratuity Calculator, HRA Exemption Calculator, CAGR Calculator</li>
+      </ul>
+      <h2>Services</h2>
+      <ul>
+        <li>Mutual Fund Advisory - Personalized fund recommendations</li>
+        <li>SIP Planning - Start with Rs 500/month</li>
+        <li>Goal-Based Planning - Retirement, education, home, wedding</li>
+        <li>Portfolio Review - Benchmark comparison and rebalancing</li>
+        <li>Tax Planning - ELSS and Section 80C optimization</li>
+        <li>Risk Profiler - Scientific risk profiling and financial health assessment</li>
+      </ul>
+      <p>Contact: WhatsApp +91 98765 43210 | Email: nandalal@example.com | Mumbai, Maharashtra, India</p>
+      <p>Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing.</p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,0 +1,9 @@
+# Nandalal - Mutual Fund Distributor
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nandalal.in/sitemap.xml
+
+# Crawl-delay (optional, be kind to crawlers)
+Crawl-delay: 1

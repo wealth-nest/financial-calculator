@@ -70,7 +70,7 @@ export default function LumpsumResults({ result }: LumpsumResultsProps) {
                 tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}k`}
               />
               <Tooltip
-                formatter={(value: number) => `₹${value.toLocaleString('en-IN')}`}
+                formatter={(value: number | undefined) => `₹${(value ?? 0).toLocaleString('en-IN')}`}
                 contentStyle={{ backgroundColor: '#fff', border: '1px solid #ccc', borderRadius: '8px' }}
               />
               <Legend />

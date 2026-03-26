@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Calculator } from 'lucide-react';
+import { Calculator, ChevronDown, ChevronUp } from 'lucide-react';
 import { calculateSIP } from '../services/sipService';
 import { SIPCalculationResult } from '../types/sip';
 import SIPResults from './SIPResults';
@@ -16,6 +16,7 @@ export default function SIPCalculator() {
   const [result, setResult] = useState<SIPCalculationResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showTable, setShowTable] = useState(false);
 
   const handleCalculate = async () => {
     setError(null);
@@ -220,6 +221,60 @@ export default function SIPCalculator() {
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Growth Over Time</h3>
               <SIPChart data={result.monthlyData} />
+            </div>
+
+            {/* Monthly Breakdown Table */}
+            <div className="mt-8">
+              <button
+                onClick={() => setShowTable(!showTable)}
+                className="flex items-center gap-2 text-lg font-semibold text-gray-900 mb-4 hover:text-blue-600 transition-colors"
+              >
+                Monthly Breakdown
+                {showTable ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+              </button>
+
+              {showTable && (
+                <div className="overflow-x-auto rounded-xl border border-gray-200">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-gray-50">
+                        <th className="px-4 py-3 text-left font-semibold text-gray-700">Month</th>
+                        <th className="px-4 py-3 text-right font-semibold text-gray-700">Invested</th>
+                        <th className="px-4 py-3 text-right font-semibold text-gray-700">Value</th>
+                        <th className="px-4 py-3 text-right font-semibold text-gray-700">Returns</th>
+                        {result.totalTopups > 0 && (
+                          <th className="px-4 py-3 text-right font-semibold text-gray-700">Top-up</th>
+                        )}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {result.monthlyData.map((row) => (
+                        <tr
+                          key={row.month}
+                          className={`border-t border-gray-100 ${row.month % 12 === 0 ? 'bg-blue-50' : ''}`}
+                        >
+                          <td className="px-4 py-2 text-gray-700">
+                            {row.month}
+                            {row.month % 12 === 0 && (
+                              <span className="ml-1 text-xs text-blue-600 font-medium">Yr {row.month / 12}</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-2 text-right text-gray-900">₹{row.invested.toLocaleString('en-IN')}</td>
+                          <td className="px-4 py-2 text-right text-green-700">₹{row.value.toLocaleString('en-IN')}</td>
+                          <td className="px-4 py-2 text-right text-emerald-600">
+                            ₹{Math.round(row.value - row.invested).toLocaleString('en-IN')}
+                          </td>
+                          {result.totalTopups > 0 && (
+                            <td className="px-4 py-2 text-right text-orange-600">
+                              {row.topupApplied > 0 ? `₹${row.topupApplied.toLocaleString('en-IN')}` : '—'}
+                            </td>
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           </div>
         )}

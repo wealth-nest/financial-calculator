@@ -1,6 +1,6 @@
 import { LumpsumCalculationRequest, LumpsumCalculationResult } from '../types/lumpsum';
 
-const API_URL = 'http://localhost:3001/api/calculate-lumpsum';
+const API_URL = '/api/calculate-lumpsum';
 
 export async function calculateLumpsum(
   request: LumpsumCalculationRequest
